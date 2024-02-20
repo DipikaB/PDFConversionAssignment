@@ -1,0 +1,22 @@
+Name,R/W,Bit 7,Bit 6,Bit 5,Bit 4,Bit 3,Bit 2,Bit 1,Bit 0
+TX2,W,FD7,FD6,FD5,FD4,FD3,FD2,FD1,FD0
+Reset,,1,1,0,0,0,0,0,0
+Data Rate (Kbps),FPFD,FDP [2:0],FD[7:0],Fdev (KHz),,,,,
+<= 50Kbps,16MHz,110,0x1F,124,,,,,
+500K ~ 50Kbps,16MHz,110,0x2F,186,,,,,
+2M / 1Mbps,16MHz,110,0x80,500,,,,,
+Name,R/W,Bit 7,Bit 6,Bit 5,Bit 4,Bit 3,Bit 2,Bit 1,Bit 0
+Delay,W,DPR2,DPR1,DPR0,TDL1,TDL0,PDL2,PDL1,PDL0
+Reset,,0,0,0,1,0,0,1,0
+DPR [2:0],TDL [1:0],WPLL to TX,Note,,,,,,
+000,00,20 us,,,,,,,
+000,01,40 us,,,,,,,
+000,10,60 us,Recommend,,,,,,
+000,11,80 us,,,,,,,
+DPR [2:0],PDL [2:0],"PLL to WPLL
+(LO freq. fixed)","PLL to WPLL
+(LO freq changed)",Note,,,,,
+000,001,10 us,50 us,,,,,,
+000,010,10 us,70 us,Recommend,,,,,
+000,011,10 us,90 us,,,,,,
+000,100,10 us,110 us,,,,,,
